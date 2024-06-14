@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="canvas.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4 Image Slider</title>
+    <style>
+        #sliderContainer {
+            position: relative;
+            width: 364px; /* A4 width */
+            height: 474px; /* A4 height */
+            overflow: hidden;
+            margin: auto;
+        }
+
+        #imageStrip {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .sliderImage {
+            min-width: 364px; /* Must match the container width */
+            height: 474px; /* Must match the container height */
+        }
+
+        .navButton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #leftButton {
+            left: 10px;
+        }
+
+        #rightButton {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div class="pull-left">  
+          <a href="https://thaichristian.ac.th/th/">
+          <img src="https://thaichristian.ac.th/wp-content/uploads/2020/01/logo.png" alt=""
+          style="height: 75px;">
+          </a>
+        </div>
+
+
+        <div class="pull-right">
+                <a class="fakeactive" href="https://70810bee-e0e5-4501-a69b-a9c0cd5095e4-00-2zdminpx32euu.riker.replit.dev">Home</a>
+                <a href="us.html">us</a>
+              </div>
+            </div>
+
+
+      <style>
+        body {
+        margin: 0;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+        }
+        #navbar {
+        overflow: hidden;
+        background-color: #f2ebeb;
+        }
+        #navbar a {
+        float: left;
+        display: block;
+        color: #000000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+        #navbar a:hover {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        }
+        .fakeactive {
+        background-color: #e01111;
+        color: white;
+        }
+        .content {
+        padding: 16px;
+        }
+        .sticky {
+        position: relative;
+        top: 0;
+        width: 100%;
+        }
+        .sticky + .content {
+        padding-top: 60px;
+        }
+      </style><!--this is for the nav bar-->
+    
+    <div id="sliderContainer">
+        <button id="leftButton" class="navButton">&#9664;</button>
+        <div id="imageStrip">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251032003701379093/IMG_9857.png?ex=666d19d8&is=666bc858&hm=eb3052321c9e2a83c58fca814baa9b8a022c7d483b0f995ad11b540b84fee96d&" alt="Image 1">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028010933682176/1_-_1.png?ex=666d1620&is=666bc4a0&hm=8515b94f39d7cea793df450aaa05c765e1b6dc5b04aa001cfce62eebbdd37768&" alt="Image 2">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028011545919580/1_-_2.png?ex=666d1620&is=666bc4a0&hm=471ff5f7c355ab1848dccaa1c278c77ce662e9e37792d41f3ee7ae9b73618bbe&" alt="Image 3">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028012686901358/1_-_4.png?ex=666d1621&is=666bc4a1&hm=e1eab9c249a0bfaf207510b5159bbc726f1922e2524beb2e18e1cd3532759b48&" alt="Image 4">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028012065882142/1_-_3.png?ex=666d1621&is=666bc4a1&hm=aea042baab059251cc35d6851259cac06a59d834a14b1963c388521d2cce236b&" alt="Image 5">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028013328498799/1_-_5.png?ex=666d1621&is=666bc4a1&hm=dcb562f82d402f3fcb6e952206e84de88a622dd4ee41014a563cd4303b0cd760&" alt="Image 6">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028014079148062/1_-_6.png?ex=666d1621&is=666bc4a1&hm=452c91016c87bccf755996b696f570d942e972524aa781b02b4fbe3c74ed3505&" alt="Image 7">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028014741979147/1_-_7.png?ex=666d1621&is=666bc4a1&hm=68f3ee24bfcd3d619d9667d7af99e027a02b40fb4168a8fb319044cdc047bcb1&" alt="Image 8">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028015996207124/1_-_9.png?ex=666d1621&is=666bc4a1&hm=7935155cc52c99a9ba551896151de5b9765d57f7fa53601f5fa510f8f44a184e&" alt="Image 9">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028015408873472/1_-_8.png?ex=666d1621&is=666bc4a1&hm=c19b26a1374a017bd334a5390c6e99ee7e5d328843b1fbf045b45d286488dad7&" alt="Image 10">
+            <img class="sliderImage" src="https://media.discordapp.net/attachments/907591269054832674/1251028016545665084/1_-_10.png?ex=666d1622&is=666bc4a2&hm=3bddd60ff4fde43eef7662f40be868163e6e4a12267f3c85dbecae7a87804f62&" alt="Image 11">
+            
+        </div>
+        <button id="rightButton" class="navButton">&#9654;</button>
+    </div>
+
+    <script>
+        var currentIndex = 0;
+        var images = document.querySelectorAll('.sliderImage');
+        var totalImages = images.length;
+
+        document.getElementById('rightButton').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateSlider();
+        });
+
+        document.getElementById('leftButton').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateSlider();
+        });
+
+        function updateSlider() {
+            var imageStrip = document.getElementById('imageStrip');
+            var newTransform = -currentIndex * 364; // Adjust based on image width (A4 width in pixels)
+            imageStrip.style.transform = 'translateX(' + newTransform + 'px)';
+        }
+    </script>
+
+</body>
+</html>
